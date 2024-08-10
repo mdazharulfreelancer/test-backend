@@ -9,16 +9,16 @@ const PORT = 3000
         mongoose
         .connect("mongodb+srv://azharul:0HHpaElwgzZHF8k5@azharul.3dooh1i.mongodb.net/DailyBazer")
         .then(() =>{
-            app.get( '/', (req, res)=>{
-                res.send("connected database"
-            )
-        })
+        
         })
         .catch((err) =>{
         console.log(err.mongoose)
         })
 
-
+    app.get( '/', (req, res)=>{
+                res.send("connected database"
+            )
+        })
 
 app.listen(PORT ,()=>{
     console.log(`Server is running on http://localhost:${PORT}`);
